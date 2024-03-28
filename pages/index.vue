@@ -12,9 +12,7 @@
 </template>
 
 <script setup>
-const { data, pending } = await useFetch(
-  "https://jsonplaceholder.typicode.com/posts"
-);
+const { data } = await useFetch("https://jsonplaceholder.typicode.com/posts");
 const posts = data.value;
 </script>
 
