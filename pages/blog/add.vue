@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import axios from "axios";
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+import axios from "axios";
 
+const router = useRouter();
 const title = ref("");
 const content = ref("");
 
@@ -20,6 +22,7 @@ const submitForm = async (event) => {
       }
     );
     alert("Blog post created successfully");
+    router.push("/");
   } catch (error) {
     alert("An error occurred while creating the blog post");
   }
