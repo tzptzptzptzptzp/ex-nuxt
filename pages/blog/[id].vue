@@ -15,6 +15,9 @@ const post = data.value;
         <h2 class="text-3xl font-bold">{{ post.title }}</h2>
         <p>UserID : {{ post.userId }}</p>
         <p>{{ post.body }}</p>
+        <div class="w-full text-center">
+          <NuxtLink to="/">- TOP -</NuxtLink>
+        </div>
       </div>
     </main>
   </div>
