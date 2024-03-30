@@ -1,4 +1,4 @@
-<template>
+<template ja>
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
