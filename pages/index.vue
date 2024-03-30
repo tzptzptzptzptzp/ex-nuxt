@@ -22,6 +22,9 @@ const posts = data.value;
           </li>
         </ul>
       </div>
+      <div class="w-full text-center">
+        <NuxtLink to="/blog/add">Add Blog →</NuxtLink>
+      </div>
     </main>
   </div>
 </template>
