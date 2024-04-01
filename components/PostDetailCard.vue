@@ -10,6 +10,7 @@ const props = defineProps<{
   id: number;
   post: PostType;
 }>();
+const router = useRouter();
 const { id, post } = toRefs(props);
 const handleDelete = async () => {
   try {
@@ -17,6 +18,7 @@ const handleDelete = async () => {
       `https://jsonplaceholder.typicode.com/posts/${id}`
     );
     alert("Blog post deleted successfully");
+    router.push("/");
   } catch (error) {
     alert("An error occurred while deleting the blog post");
   }
