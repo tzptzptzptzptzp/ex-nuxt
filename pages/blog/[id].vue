@@ -11,7 +11,7 @@ const post = data.value;
 <template>
   <div class="flex items-center justify-center w-screen h-screen">
     <main class="flex flex-col w-full max-w-5xl">
-      <PostDetailCard :post="post" />
+      <PostDetailCard :id="id" :post="post" />
     </main>
   </div>
 </template>
