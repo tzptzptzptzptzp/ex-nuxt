@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import axios from "axios";
+
 type PostType = {
   userId: number;
   title: string;
@@ -9,6 +11,16 @@ const props = defineProps<{
   post: PostType;
 }>();
 const { id, post } = toRefs(props);
+const handleDelete = async () => {
+  try {
+    const res = await axios.delete(
+      `https://jsonplaceholder.typicode.com/posts/${id}`
+    );
+    alert("Blog post deleted successfully");
+  } catch (error) {
+    alert("An error occurred while deleting the blog post");
+  }
+};
 </script>
 
 <template>
@@ -16,6 +28,9 @@ const { id, post } = toRefs(props);
     <h2 class="text-3xl font-bold">{{ post.title }}</h2>
     <p>UserID : {{ post.userId }}</p>
     <p>{{ post.body }}</p>
+    <div class="w-full text-center">
+      <button @click="handleDelete">X</button>
+    </div>
     <div class="w-full text-center">
       <NuxtLink to="/">- TOP -</NuxtLink>
     </div>
