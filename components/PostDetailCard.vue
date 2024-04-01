@@ -5,9 +5,10 @@ type PostType = {
   body: string;
 };
 const props = defineProps<{
+  id: number;
   post: PostType;
 }>();
-const { post } = toRefs(props);
+const { id, post } = toRefs(props);
 </script>
 
 <template>
