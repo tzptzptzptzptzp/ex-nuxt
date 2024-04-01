@@ -7,7 +7,7 @@ const router = useRouter();
 const title = ref("");
 const content = ref("");
 
-const submitForm = async (event) => {
+const submitForm = async (event: Event) => {
   event.preventDefault();
   if (!title.value || !content.value) {
     alert("Please fill in all fields");
