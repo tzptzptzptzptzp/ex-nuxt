@@ -31,7 +31,9 @@ const handleDelete = async () => {
     <p>UserID : {{ post.userId }}</p>
     <p>{{ post.body }}</p>
     <div class="w-full text-center">
-      <button @click="handleDelete">X</button>
+      <button @click="handleDelete">
+        <TrashIcon />
+      </button>
     </div>
     <div class="w-full text-center">
       <NuxtLink to="/">- TOP -</NuxtLink>
