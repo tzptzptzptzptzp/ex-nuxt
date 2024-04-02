@@ -30,7 +30,10 @@ const handleDelete = async () => {
     <h2 class="text-3xl font-bold">{{ post.title }}</h2>
     <p>UserID : {{ post.userId }}</p>
     <p>{{ post.body }}</p>
-    <div class="w-full text-center">
+    <div class="flex justify-end gap-4 w-full text-center">
+      <NuxtLink :to="`/blog/edit/${id}`">
+        <PencilSquareIcon />
+      </NuxtLink>
       <button @click="handleDelete">
         <TrashIcon />
       </button>
