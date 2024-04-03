@@ -20,8 +20,6 @@
 
 ## 使用技術
 
-フロントエンド
-
 - [Nuxt.js](https://nuxtjs.org/)
 - [Vue.js](https://vuejs.org/)
 - [axios](https://axios-http.com/)
@@ -36,3 +34,42 @@ npm run dev // 開発用サーバーを起動しました
 ```
 
 このリポジトリでの開発を通じて、Nuxt.js と axios を用いたウェブアプリケーション開発の基本を習得することができました。
+
+---
+
+# Nuxt.js-based CRUD Operations Learning Repository
+
+This repository was created to learn the basic implementations of Nuxt.js.  
+We utilized JsonPlaceholder as mock data to learn the implementation of dynamic web applications while handling actual data.  
+In this project, we sent HTTP requests using axios to perform operations such as fetching, creating, updating, and deleting data.
+
+## Key Features
+
+- **Nuxt.js Framework**: We adopted a powerful framework built on top of Vue.js that supports server-side rendering. This aimed to construct applications with excellent SEO and fast page loading capabilities.
+- **HTTP Communication with axios**: For fetching, creating, updating, and deleting data, we used the axios library to send HTTP requests. axios is a Promise-based HTTP client for the browser and Node.js.
+
+## Learning Objectives
+
+- We deepened our understanding of page composition and routing in Nuxt.js.
+- We acquired the method of sending HTTP requests using axios.
+- Through the implementation of CRUD operations, we enhanced our skills in developing dynamic web applications.
+- We gained experience in communicating with external APIs using JsonPlaceholder.
+
+Through this repository, we were able to solidify the foundation of real-time data handling, including CRUD operations, and acquire modern web development techniques using Nuxt.js and axios.
+
+## Technologies Used
+
+- [Nuxt.js](https://nuxtjs.org/)
+- [Vue.js](https://vuejs.org/)
+- [axios](https://axios-http.com/)
+
+## Development Steps
+
+We used npm for development.
+
+```bash
+npm install
+npm run dev // Started the development server
+```
+
+Through the development in this repository, we were able to learn the basics of web application development using Nuxt.js and axios.
