@@ -1,6 +1,9 @@
-<script setup>
+<script setup lang="ts">
 import { useRoute } from "vue-router";
+import axios from "axios";
+
 const route = useRoute();
+const router = useRouter();
 const id = route.params.id;
 const { data, error, pending } = await useFetch(
   `https://jsonplaceholder.typicode.com/posts/${id}`
@@ -14,12 +17,33 @@ watchEffect(() => {
   title.value = post.title;
   content.value = post.body;
 });
+
+const submitForm = async (event: Event) => {
+  event.preventDefault();
+  if (!title.value || !content.value) {
+    alert("Please fill in all fields");
+    return;
+  }
+  try {
+    const response = await axios.put(
+      `https://jsonplaceholder.typicode.com/posts/${id}`,
+      {
+        title: title.value,
+        content: content.value,
+      }
+    );
+    alert("Blog post edited successfully");
+    router.push(`/blog/${id}`);
+  } catch (error) {
+    alert("An error occurred while editing the blog post");
+  }
+};
 </script>
 
 <template>
   <div class="flex items-center justify-center w-screen h-screen">
     <main class="flex flex-col w-full max-w-5xl">
-      <form class="flex flex-col gap-4">
+      <form @submit="submitForm" class="flex flex-col gap-4">
         <div class="flex flex-col gap-2">
           <label for="title">Blog Title :</label>
           <input v-model="title" class="border" type="text" id="title" />
